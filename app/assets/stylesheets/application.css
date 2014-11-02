@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:700,300);
+
+body{
+	font-size: 1.5em;
+	font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+.button_group{
+  width: 100%;
+  display: flex;
+}
+button {
+	font-family: 'Oswald', sans-serif;	
+	font-size: 1em;	
+  font-weight: 300;
+	border: 0;
+	padding: 1em 2em;
+  margin: 0.5em 0;
+	width: 100%;
+  background: rgba(0,0,0,0.1);  
+  -webkit-transition:.2s;  
+}
+button:nth-child(2){
+	margin: 0.5em;
+}
+button:hover{
+  background: rgba(0,0,0,0.3);
+}
+button:active{
+  background: rgba(0,0,0,0.5);
+}
+#add:active{
+  	-webkit-transform:translateY(-1em);    
+}
+.load-more {
+	font-family: 'Oswald', sans-serif;	
+	font-size: 1em;	
+  font-weight: 500;
+	border: 0;
+	padding: 1em 2em;
+  margin: 0.5em 0;
+	width: 100%;
+  background: rgba(0,0,0,0.1);  
+  -webkit-transition:.2s;  
+}
+
+.load-more:active{
+  	-webkit-transform:translateY(-1em);    
+}
+#subtract:active{
+  	-webkit-transform:translateY(1em);    
+}
+#counter{
+	font-size: 3em;
+	text-align: center;
+  width: 100%;
+  display block;
+  background: rgba(0,0,0,0.1);
+  padding: 2em 0;
+}
