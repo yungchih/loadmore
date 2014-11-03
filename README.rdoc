@@ -9,3 +9,9 @@ rake db:create
 rake db:migrate
 
 rake db:seed
+
+rvm gemset create loadmore
+
+rvm gemset use loadmore
+
+bundle install

@@ -12,23 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 $(document).ready(function(){
-		// $('.load-more').click();
-		// setTimeout(function() {
-  //       trigger_load_more();
-  //   },10);
-		// setTimeout(function() {
-  //       trigger_load_more();
-  //   },100);
-  //   setTimeout(function() {
-  //       trigger_load_more();
-  //   },200);
-  //   setTimeout(function() {
-  //       trigger_load_more();
-  //   },300);
   //   setTimeout(function() {
   //       trigger_load_more();
   //   },500);
@@ -45,33 +31,43 @@ $(document).ready(function(){
 	    $("#counter").text(cookieValue);
 	});
 
-	if ($.cookie("cookieValue") && $.cookie("cookieValue") > 0){
-		// alert($.cookie("cookieValue"));
-		for (i = 0; i < cookieValue; i++) { 
-				// alert(i);
-				// $('.load-more').trigger('click');
-				// $(".load-more").click();  					
-				// setTimeout($('.load-more').click(), 3000);
-				setTimeout(function() { trigger_load_more();},i*100);
-		}
-	}
+	// if ($.cookie("cookieValue") && $.cookie("cookieValue") > 0){
+	// 	// alert($.cookie("cookieValue"));
+	// 	for (i = 0; i < cookieValue; i++) { 
+	// 			// alert(i);
+	// 			setTimeout(function() { trigger_load_more();},i*100);
+	// 	}
+	// }
+	load_based_on_cookie();
 
 	$("#reset").click(function(){
 		if ($.cookie("cookieValue")){
 			cookieValue = 0;
 			$.cookie("cookieValue", cookieValue);
 			$("#counter").text(cookieValue);
+			location.reload();
 		} 
 	});
     
 	if(window.history && window.history.pushState) {
     // window.history.pushState('forward', null, './#forward');
     $(window).on('popstate', function() {
-      // alert('Back button was pressed.');
+       // alert('Back button was pressed.');
+       trigger_load_more();
+
     });
 
   }
 
+function load_based_on_cookie(){
+		if ($.cookie("cookieValue") && $.cookie("cookieValue") > 0){
+	
+		for (i = 0; i < cookieValue; i++) { 
+	
+				setTimeout(function() { trigger_load_more();},i*100);
+		}
+	}
+}
 
 function trigger_load_more(){
 	if (cookieValue > 0) cookieValue--;
