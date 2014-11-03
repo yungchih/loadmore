@@ -1,3 +1,11 @@
 == README
 
 This is a tutorial application to demonstrate load more results with ajax, jquery and rails. It also reload the number of load more data based on number of click when page reload.
+
+#### initial setup
+
+rake db:create
+
+rake db:migrate
+
+rake db:seed
