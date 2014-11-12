@@ -35,6 +35,7 @@ group :doc do
 end
 
 gem 'faker'
+gem 'feedjira'
 
 # group :production do
 # 	gem 'pg'
