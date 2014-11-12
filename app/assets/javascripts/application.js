@@ -31,13 +31,6 @@ $(document).ready(function(){
 	    $("#counter").text(cookieValue);
 	});
 
-	// if ($.cookie("cookieValue") && $.cookie("cookieValue") > 0){
-	// 	// alert($.cookie("cookieValue"));
-	// 	for (i = 0; i < cookieValue; i++) { 
-	// 			// alert(i);
-	// 			setTimeout(function() { trigger_load_more();},i*100);
-	// 	}
-	// }
 	load_based_on_cookie();
 
 	$("#reset").click(function(){
@@ -48,9 +41,10 @@ $(document).ready(function(){
 			location.reload();
 		} 
 	});
-    
+  
+  // alert(window.history + ' ' + window.history.pushState);  
 	if(window.history && window.history.pushState) {
-    // window.history.pushState('forward', null, './#forward');
+    // window.history.pushState('forward', null, '');
     $(window).on('popstate', function() {
        // alert('Back button was pressed.');
        trigger_load_more();
@@ -61,10 +55,8 @@ $(document).ready(function(){
 
 function load_based_on_cookie(){
 		if ($.cookie("cookieValue") && $.cookie("cookieValue") > 0){
-	
 		for (i = 0; i < cookieValue; i++) { 
-	
-				setTimeout(function() { trigger_load_more();},i*100);
+				setTimeout(function() { trigger_load_more();},i*200);
 		}
 	}
 }

@@ -15,3 +15,6 @@ rvm gemset create loadmore
 rvm gemset use loadmore
 
 bundle install
+
+# http://railscasts.com/episodes/168-feed-parsing?view=asciicast
+# https://github.com/samuel-hill/ga-wdi-rss-project/blob/86922be3f4ff8102d18ed9d0b44931399293a22e/app/models/article.rb
