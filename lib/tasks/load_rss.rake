@@ -21,14 +21,8 @@ namespace :load_rss do
 							content: entry.content
 						)
 
-						puts "#{entry.categories}"
-						@tags = add_tags(entry.categories)
-
-						puts "@tags: #{@tags.class}\n"
-						puts "#{@tags.inspect}\n"
-						
+						@tags = add_tags(entry.categories)						
 						@tags.each do |tag|
-							puts "#{tag.class}\n"
 							@new_feed.tags << tag
 						end
 
