@@ -1,5 +1,7 @@
 LoadMore::Application.routes.draw do
-  resources :feed_entries
+  resources :tags
+
+  resources :feeds
 
   root 'users#index'
   resources :users

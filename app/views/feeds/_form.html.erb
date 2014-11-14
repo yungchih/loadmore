@@ -1,10 +1,10 @@
-<%= form_for(@feed_entry) do |f| %>
-  <% if @feed_entry.errors.any? %>
+<%= form_for(@feed) do |f| %>
+  <% if @feed.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@feed_entry.errors.count, "error") %> prohibited this feed_entry from being saved:</h2>
+      <h2><%= pluralize(@feed.errors.count, "error") %> prohibited this feed from being saved:</h2>
 
       <ul>
-      <% @feed_entry.errors.full_messages.each do |msg| %>
+      <% @feed.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

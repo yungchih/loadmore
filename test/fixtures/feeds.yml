@@ -4,7 +4,7 @@ one:
   name: MyString
   url: MyString
   guid: MyString
-  published_at: 2014-11-11 17:18:59
+  published_at: 2014-11-14 09:39:44
   summary: MyText
   content: MyText
 
@@ -12,6 +12,6 @@ two:
   name: MyString
   url: MyString
   guid: MyString
-  published_at: 2014-11-11 17:18:59
+  published_at: 2014-11-14 09:39:44
   summary: MyText
   content: MyText

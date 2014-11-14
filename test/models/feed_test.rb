@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FeedEntryTest < ActiveSupport::TestCase
+class FeedTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

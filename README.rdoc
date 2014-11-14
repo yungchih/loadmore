@@ -19,3 +19,22 @@ bundle install
 # http://railscasts.com/episodes/168-feed-parsing?view=asciicast
 # https://github.com/samuel-hill/ga-wdi-rss-project/blob/86922be3f4ff8102d18ed9d0b44931399293a22e/app/models/article.rb
 # https://github.com/samuel-hill/ga-wdi-rss-project/blob/86922be3f4ff8102d18ed9d0b44931399293a22e/lib/tasks/update_articles.rake
+
+rails g scaffold feed name:string url:string guid:string published_at:datetime summary:text content:text
+
+rails g scaffold tag name:string
+
+rails g model feed_tag feed:references tag:references
+
+# models/feed.rb
+	has_many :feed_tags
+	has_many :tags, through: :feed_tags
+
+# models/tag.rb
+	has_many :feed_tags
+	has_many :feeds, through: :feed_tags
+
+# models/feed_tag.rb
+	belongs_to :feed
+	belongs_to :tag
+
