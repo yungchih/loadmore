@@ -4,7 +4,7 @@ namespace :load_rss do
   # rake load_rss:import_rss
   task import_rss: :environment do
 
-# READ RSS AND PARSE IT
+				# READ RSS AND PARSE IT
 				url = %w[http://journalsblog.gastro.org/feed/]		
 				feeds = Feedjira::Feed.fetch_and_parse url
 				feed = feeds['http://journalsblog.gastro.org/feed/']
