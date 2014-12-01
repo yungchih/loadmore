@@ -1,0 +1,6 @@
+
+<% @upcoming_events[(@id.to_i+1)..(@id.to_i+8).to_i].each do |e| %>
+	<div class="record" data-id="<%= @id.to_i+8 %>">
+	ID: <%= e["id"] %> Date: <%= e["start"] %> Name: <%= e["name"] %>
+	</div>
+<% end %>

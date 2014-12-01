@@ -1,17 +1,16 @@
 <h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
 <%= @upcoming_events.size %><br/>
 
-First set of 8<br/>
-<% @upcoming_events.take(8).each do |e| %>
-	ID: <%= e["id"] %> Date: <%= e["start"] %> Name: <%= e["name"] %><br/>
-<% end %>
-Second set of 8<br/>
-<% @upcoming_events[8..15].each do |e| %>
-	ID: <%= e["id"] %> Date: <%= e["start"] %> Name: <%= e["name"] %><br/>
-<% end %>
+<div class="container">
+	<% @upcoming_events.take(8).each do |e| %>
+		<div class="record" data-id="7">
+		ID: <%= e["id"] %> Date: <%= e["start"] %> Name: <%= e["name"] %>
+		</div>
+	<% end %>
+</div>
 
-Third set of 8<br/>
-<% @upcoming_events[16..23].each do |e| %>
-	ID: <%= e["id"] %> Date: <%= e["start"] %> Name: <%= e["name"] %><br/>
-<% end %>
+<div class="load-more-container">
+<%= image_tag "ajax-loader.gif", style: "display:none;", class: "loading-gif" %>
+	<%= link_to "Load More Events", events_path, class: "load-more-events" %>
+</div>
+

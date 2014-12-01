@@ -61,6 +61,21 @@ button:active{
 .load-more:active{
   	-webkit-transform:translateY(-1em);    
 }
+.load-more-events {
+  font-family: 'Oswald', sans-serif;  
+  font-size: 1em; 
+  font-weight: 500;
+  border: 0;
+  padding: 1em 2em;
+  margin: 0.5em 0;
+  width: 100%;
+  background: rgba(0,0,0,0.1);  
+  -webkit-transition:.2s;  
+}
+
+.load-more-events:active{
+    -webkit-transform:translateY(-1em);    
+}
 #subtract:active{
   	-webkit-transform:translateY(1em);    
 }

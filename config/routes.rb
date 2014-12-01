@@ -1,5 +1,6 @@
 LoadMore::Application.routes.draw do
   get "/events" => "events#index"
+  get "/events/cached_events" => "events#cached_events"
   resources :tags
   resources :feeds
 
