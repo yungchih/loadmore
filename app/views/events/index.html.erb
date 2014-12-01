@@ -1,0 +1,17 @@
+<h1>Events#index</h1>
+<p>Find me in app/views/events/index.html.erb</p>
+<%= @upcoming_events.size %><br/>
+
+First set of 8<br/>
+<% @upcoming_events.take(8).each do |e| %>
+	ID: <%= e["id"] %> Date: <%= e["start"] %> Name: <%= e["name"] %><br/>
+<% end %>
+Second set of 8<br/>
+<% @upcoming_events[8..15].each do |e| %>
+	ID: <%= e["id"] %> Date: <%= e["start"] %> Name: <%= e["name"] %><br/>
+<% end %>
+
+Third set of 8<br/>
+<% @upcoming_events[16..23].each do |e| %>
+	ID: <%= e["id"] %> Date: <%= e["start"] %> Name: <%= e["name"] %><br/>
+<% end %>
